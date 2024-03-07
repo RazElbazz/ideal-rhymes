@@ -1,6 +1,6 @@
 # imports
 import os
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, request, render_template, redirect, url_for
 
 
 # paths
@@ -17,7 +17,13 @@ application = app
 # index page
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template("index.html")
+
+    word = ""
+
+    if request.method == 'POST':
+        word = request.form["word"]
+
+    return render_template("index.html", word=word)
 
 
 # redirect to index page

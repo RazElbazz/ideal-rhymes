@@ -49,6 +49,7 @@
 					<form
 						class="shadow-lg"
 						data-bs-theme="light"
+						method="post"
 					>
 						<div class="mb-3">
 							<label
@@ -58,16 +59,22 @@
 							><input
 								class="form-control item"
 								type="text"
-								id="name"
+								name="word"
+								{%
+								if
+								word
+								%}
+								value="{{word}}"
+								{%
+								endif
+								%}
 							/>
 						</div>
-						<div class="mb-3"></div>
-						<div class="mb-3"></div>
-						<div class="mb-3"></div>
 						<div class="mb-3 mt-4">
 							<button
 								class="btn btn-primary btn-lg d-block w-100"
 								type="submit"
+								value="submit"
 							>
 								בצע ניתוח
 							</button>
