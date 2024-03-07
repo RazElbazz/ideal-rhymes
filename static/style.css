@@ -1,0 +1,11 @@
+:root {
+	--bg-color: #326273;
+	--bright-color: #5c9ead;
+	--text-color: #ffffff;
+}
+
+body {
+	font-family: "Rubik";
+	background-color: var(--bg-color);
+	color: var(--text-color);
+}
